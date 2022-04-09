@@ -21,6 +21,7 @@ public class Instructors {
     private String name;
     private Integer phoneNumber;
     private String experience;
+    private String certifications;
     private String description;
     private String languages;
     private String photo;
