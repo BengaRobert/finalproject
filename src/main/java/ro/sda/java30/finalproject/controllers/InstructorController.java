@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import ro.sda.java30.finalproject.config.entities.Instructors;
+import ro.sda.java30.finalproject.languages.Languages;
 
 @Controller
 public class InstructorController {
