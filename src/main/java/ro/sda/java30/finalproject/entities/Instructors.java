@@ -1,4 +1,4 @@
-package ro.sda.java30.finalproject.config.entities;
+package ro.sda.java30.finalproject.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
