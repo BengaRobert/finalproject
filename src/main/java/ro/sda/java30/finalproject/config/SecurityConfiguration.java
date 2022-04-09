@@ -14,7 +14,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeRequests()
 //                .antMatchers(HttpMethod.GET,"/api/cars").hasAnyRole("ADMIN","CARS")
 //                .antMatchers(HttpMethod.POST,"/api/cars").authenticated()
-//                .antMatchers("/api/users/**").hasAuthority("ROLE_USER_ADMIN")
+//                .antMatchers("/api/users/**").hasAuthority("ROLE_USER_ADMIN") //test
                 .anyRequest().permitAll()
                 .and()
                     .formLogin()
