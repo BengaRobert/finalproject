@@ -11,11 +11,11 @@
 
 <div class="container my-5">
     <div class="row">
-        <form method="post" th:action="@{/instructor}" th:object="${formObject}">
+        <form method="post" th:action="@{/equipment/}" th:object="${formObject}">
             <div class="row">
                 <div class="from-group col-md-6">
                     <label for="id">Id</label>
-                    <input id="id" hidden type="text" placeholder="Enter equipment id" th:field="*{id}">
+                    <input id="id"  type="text" placeholder="Enter equipment id" th:field="*{id}">
                 </div>
 
                 <div class="from-group col-md-6">
@@ -25,12 +25,12 @@
 
                 <div class="from-group col-md-6">
                     <label for="category">Category</label>
-                    <input id="category" hidden type="text"  th:field="*{category}">
+                    <input id="category"  type="text"  th:field="*{category}">
                 </div>
 
                 <div class="from-group col-md-6">
                     <label for="price">Price</label>
-                    <input id="price" type="text" th:field="*{price}">
+                    <input id="price" type="number" th:field="*{price}">
                 </div>
 
                 <div class="from-group col-md-6">
@@ -40,7 +40,7 @@
                 
                 <div class="from-group col-md-6">
                     <label for="size">Size</label>
-                    <input id="size" type="text" th:field="*{size}">
+                    <input id="size" type="number" th:field="*{size}">
                 </div>
 
                 <div class="from-group col-md-6">

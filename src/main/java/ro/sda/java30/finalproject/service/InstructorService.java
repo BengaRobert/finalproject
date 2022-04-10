@@ -1,6 +1,7 @@
 package ro.sda.java30.finalproject.service;
 
 import org.springframework.stereotype.Service;
+import ro.sda.java30.finalproject.Mappers.InstructorMapper;
 import ro.sda.java30.finalproject.entities.Instructor;
 import ro.sda.java30.finalproject.model.InstructorDto;
 import ro.sda.java30.finalproject.repository.InstructorRepository;

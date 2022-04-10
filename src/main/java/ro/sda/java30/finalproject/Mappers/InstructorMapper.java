@@ -1,4 +1,4 @@
-package ro.sda.java30.finalproject.service;
+package ro.sda.java30.finalproject.Mappers;
 
 import org.springframework.stereotype.Service;
 import ro.sda.java30.finalproject.entities.Instructor;

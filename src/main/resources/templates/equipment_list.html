@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Level</th>
+            <th>Size</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="equipment: ${equipmentList}">
+            <td th:text="${equipment.id}"></td>
+            <td th:text="${equipment.name}"></td>
+            <td th:text="${equipment.category}"></td>
+            <td th:text="${equipment.price}"></td>
+            <td th:text="${equipment.level}"></td>
+            <td th:text="${equipment.size}"></td>
+            <td th:text="${equipment.description}"></td>
+
+
+            <td><a th:href="@{/equipment/update/{id}(id=${equipment.id})}">Update</a>
+                <a th:href="@{/equipment/delete/{id}(id=${equipment.id})}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/equipment/create}">Add new equipment</a>
+
+</div>
+
+
+</body>
+</html>
