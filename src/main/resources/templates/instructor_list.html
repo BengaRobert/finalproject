@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Experience</th>
+            <th>Certifications</th>
+            <th>Description</th>
+            <th>Known Languages</th>
+            <th>Photo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="instructor: ${instructorsList}">
+            <td th:text="${instructor.id}"></td>
+            <td th:text="${instructor.name}"></td>
+            <td th:text="${instructor.phoneNumber}"></td>
+            <td th:text="${instructor.experience}"></td>
+            <td th:text="${instructor.certifications}"></td>
+            <td th:text="${instructor.description}"></td>
+            <td th:text="${instructor.languages}"></td>
+            <td th:text="${instructor.photo}"></td>
+
+<!--            <td><a th:href="@{//update/{id}(id=${car.id})}">Update</a>-->
+<!--                <a th:href="@{/cars/delete/{id}(id=${car.id})}">Delete</a>-->
+<!--            </td>-->
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/cars/create}">Add new Car</a>
+
+</div>
+
+</body>
+</html>
