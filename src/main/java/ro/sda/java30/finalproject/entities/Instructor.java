@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Instructors {
+public class Instructor {
     @Id
     @GeneratedValue
     private Long id;
