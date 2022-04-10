@@ -31,4 +31,9 @@ public class InstructorService {
                 .map(instructor -> instructorMapper.mapEntityToDto(instructor))
                 .collect(Collectors.toList());
     }
+
+    public InstructorDto findInstructorById(Long id) {
+        Instructor instructor= instructorRepository.findById(id).orElseThrow(()-> new RuntimeException("Instructor not found"));
+        return instructorMapper.mapEntityToDto(instructor);
+    }
 }

@@ -21,6 +21,7 @@
             <th>Description</th>
             <th>Known Languages</th>
             <th>Photo</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -34,13 +35,13 @@
             <td th:text="${instructor.languages}"></td>
             <td th:text="${instructor.photo}"></td>
 
-<!--            <td><a th:href="@{//update/{id}(id=${car.id})}">Update</a>-->
-<!--                <a th:href="@{/cars/delete/{id}(id=${car.id})}">Delete</a>-->
-<!--            </td>-->
+            <td><a th:href="@{/instructor/update/{id}(id=${instructor.id})}">Update</a>
+                <a th:href="@{/instructor/delete/{id}(id=${instructor.id})}">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>
-    <a th:href="@{/cars/create}">Add new Car</a>
+    <a th:href="@{/instructor/create}">Add new instructor</a>
 
 </div>
 

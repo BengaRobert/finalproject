@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import ro.sda.java30.finalproject.model.InstructorDto;
 import ro.sda.java30.finalproject.service.InstructorService;
@@ -18,7 +19,7 @@ public class InstructorController {
     }
 
 
-    @GetMapping("/instructor")
+    @GetMapping("/instructor/create")
     public String showInstructors(Model model) {
         model.addAttribute("formObject", new InstructorDto());
         return "instructor";
@@ -34,6 +35,12 @@ public class InstructorController {
     public String showAllInstructors(Model model) {
         model.addAttribute("instructorsList", instructorService.getAllInstructors());
         return "instructor_list";
+    }
+    @GetMapping("/instructor/update/{id}")
+    public String updateInstructor(@PathVariable Long id, Model model){
+        InstructorDto instructorDto = instructorService.findInstructorById(id);
+        model.addAttribute("formObject", instructorDto);
+        return "instructor";
     }
 
 
