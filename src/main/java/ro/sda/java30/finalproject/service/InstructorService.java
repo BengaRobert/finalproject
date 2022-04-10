@@ -36,4 +36,9 @@ public class InstructorService {
         Instructor instructor= instructorRepository.findById(id).orElseThrow(()-> new RuntimeException("Instructor not found"));
         return instructorMapper.mapEntityToDto(instructor);
     }
+
+    public void deleleteInstructor(Long id) {
+        Instructor instructor= instructorRepository.findById(id).orElseThrow(()-> new RuntimeException("Instructor not found"));
+        instructorRepository.delete(instructor);
+    }
 }
