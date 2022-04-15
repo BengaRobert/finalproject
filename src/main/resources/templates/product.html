@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row">
+        <form method="post" th:action="@{/product/}" th:object="${formObject}">
+            <div class="row">
+                <div class="from-group col-md-6">
+                    <label for="id">ID</label>
+                    <input id="id" type="text" th:field="*{id}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="product">Product</label>
+                    <input id="product" type="text" th:field="*{Product}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="quantity">Quantity</label>
+                    <input id="quantity" type="number" th:field="*{quantity}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="price">Price</label>
+                    <input id="price" type="number" th:field="*{price}">
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
