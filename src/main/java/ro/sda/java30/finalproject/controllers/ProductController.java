@@ -8,7 +8,7 @@ import ro.sda.java30.finalproject.model.ProductDto;
 import ro.sda.java30.finalproject.service.ProductService;
 
 @Controller
-//@RequestMapping("/product")
+@RequestMapping("/product")
 public class ProductController {
 
     private final ProductService productService;
@@ -24,20 +24,20 @@ public class ProductController {
         return "/product";
     }
 
-    @PostMapping("/product")
+    @PostMapping("/")
     public String saveAllProducts(@ModelAttribute("formObject") ProductDto form, Model model) {
         form = productService.save(form);
         model.addAttribute("formObject", form);
-        return "/product";
+        return "redirect:/product/";
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public String showAllProducts(Model model) {
         model.addAttribute("productList", productService.getAllProducts());
         return "product_list";
     }
 
-    @GetMapping("")
+    @GetMapping("/update/{id}")
     public String updateProduct(@PathVariable Long id, Model model) {
         ProductDto productDto = productService.findProductById(id);
         model.addAttribute("formObject", productDto);
