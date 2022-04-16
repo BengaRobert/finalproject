@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row">
+        <form method="post" th:action="@{/customer/}" th:object="${formObject}">
+            <div class="row">
+                <div class="from-group col-md-6">
+                    <label for="id">ID</label>
+                    <input id="id" type="text" th:field="*{id}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" th:field="*{name}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" th:field="*{password}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="age">Age</label>
+                    <input id="age" type="number" th:field="*{age}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" th:field="*{email}">
+                </div>
+
+                <div class="from-group col-md-6">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" type="number" th:field="*{phoneNumber}">
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
