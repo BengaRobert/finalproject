@@ -1,9 +1,11 @@
 package ro.sda.java30.finalproject.Mappers;
 
+import org.springframework.stereotype.Service;
 import ro.sda.java30.finalproject.entities.Customer;
 import ro.sda.java30.finalproject.model.CustomerDto;
-
+@Service
 public class CustomerMapper implements Mapper<Customer, CustomerDto>{
+
     @Override
     public Customer mapDtoToEntity(CustomerDto dto) {
         Customer entity = new Customer();
