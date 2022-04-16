@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class SpecializationDto {
     private Long id;
-    private String ski;
-    private String snowboard;
-    private String skiSnowboard;
+    private String name;
+
+
 }

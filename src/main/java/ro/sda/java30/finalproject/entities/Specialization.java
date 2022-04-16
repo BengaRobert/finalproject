@@ -18,10 +18,7 @@ public class Specialization {
     @Id
     @GeneratedValue
     private Long id;
-    private String ski;
-    private String snowboard;
-    private String skiSnowboard;
-
+    private String name;
 
 
 }

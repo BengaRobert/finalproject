@@ -18,25 +18,26 @@ public class SpecializationController {
 
     @GetMapping("/create")
     public String showServices(Model model){
-        model.addAttribute("fromObject",new SpecializationDto());
+        model.addAttribute("formObject",new SpecializationDto());
         return "specialization";
     }
     @PostMapping("/")
-    public String saveAllSpecializations(@ModelAttribute("fromObject") SpecializationDto from, Model model){
+    public String saveAllSpecializations(@ModelAttribute("formObject") SpecializationDto from, Model model){
         from = specializationService.save(from);
-        model.addAttribute("fromObject", from);
+        model.addAttribute("formObject", from);
         return "redirect:/specialization";
     }
     @GetMapping("")
     public String showAllSpecializations(Model model){
-        model.addAttribute("specializationsList", specializationService.getAllSpecializations());
-        return "specialization";
+        model.addAttribute("specializationList", specializationService.getAllSpecializations());
+        return "specialization_list";
     }
 
     @GetMapping("/update/{id}")
     public String updateSpecialization(@PathVariable Long id, Model model){
         SpecializationDto specializationDto = specializationService.findSpecializationById(id);
-        return "specialization";
+        model.addAttribute("formObject", specializationDto);
+        return "/specialization";
     }
 
     @GetMapping("/delete/{id}")

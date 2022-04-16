@@ -15,5 +15,5 @@ public class CustomerDto {
     private String password;
     private Integer age;
     private String email;
-    private Integer phoneNr;
+    private Integer phoneNumber;
 }
