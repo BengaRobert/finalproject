@@ -3,6 +3,7 @@ package ro.sda.java30.finalproject.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ro.sda.java30.finalproject.model.ApplicationRole;
 import ro.sda.java30.finalproject.model.CustomerDto;
 import ro.sda.java30.finalproject.model.ProductDto;
 import ro.sda.java30.finalproject.service.CustomerService;
@@ -26,11 +27,14 @@ public class CustomerController {
 
     @PostMapping("/")
     public String saveAllCustomers(@ModelAttribute("formObject") CustomerDto form, Model model) {
+        if(form.getApplicationRole()==null){
+            form.setApplicationRole(ApplicationRole.ROLE_USER);
+        }
         form = customerService.save(form);
         model.addAttribute("formObject", form);
         return "redirect:/customer/";
     }
-    @GetMapping("")
+    @GetMapping("/list")
     public String showAllCustomers(Model model) {
         model.addAttribute("customerList", customerService.getAllCustomers());
         return "customer_list";
@@ -45,7 +49,7 @@ public class CustomerController {
         @GetMapping("/delete/{id}")
         public String deleteCustomer(@PathVariable Long id, Model model) {
             customerService.deleteCustomer(id);
-            return "redirect:/customer/";
+            return "redirect:/customer/list";
         }
     }
 

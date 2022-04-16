@@ -16,4 +16,5 @@ public class CustomerDto {
     private Integer age;
     private String email;
     private Integer phoneNumber;
+    private ApplicationRole applicationRole;
 }

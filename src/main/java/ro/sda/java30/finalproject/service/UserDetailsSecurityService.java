@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import ro.sda.java30.finalproject.model.ApplicationRole;
 import ro.sda.java30.finalproject.model.CustomerDto;
 
 import java.util.HashSet;
@@ -35,7 +36,7 @@ public class UserDetailsSecurityService implements UserDetailsService {
         Set<GrantedAuthority> roles = new HashSet<>();
         //TODO define roles for our application
 //        roles.add(new SimpleGrantedAuthority(user.getRole().getName()));
-        roles.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        roles.add(new SimpleGrantedAuthority(customerDto.getApplicationRole() !=null ?customerDto.getApplicationRole().name(): ApplicationRole.ROLE_USER.name()));
         return new org.springframework.security.core.userdetails
                 .User(customerDto.getEmail(), customerDto.getPassword(), roles);
     }

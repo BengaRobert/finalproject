@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ro.sda.java30.finalproject.model.ApplicationRole;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,5 +24,6 @@ public class Customer{
     private Integer age;
     private String email;
     private Integer phoneNumber;
+    private ApplicationRole applicationRole;
 
 }
