@@ -20,6 +20,7 @@ public class CustomerMapper implements Mapper<Customer, CustomerDto>{
         entity.setAge(dto.getAge());
         entity.setEmail(dto.getEmail());
         entity.setPassword(bCryptPasswordEncoder.encode(dto.getPassword()));
+        entity.setApplicationRole(dto.getApplicationRole());
         return entity;
     }
 
@@ -32,6 +33,7 @@ public class CustomerMapper implements Mapper<Customer, CustomerDto>{
         dto.setName(entity.getName());
         dto.setPhoneNumber(entity.getPhoneNumber());
         dto.setPassword(entity.getPassword());
+        dto.setApplicationRole(entity.getApplicationRole());
         return dto;
     }
 
