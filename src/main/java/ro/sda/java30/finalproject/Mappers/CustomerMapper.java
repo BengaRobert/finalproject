@@ -1,10 +1,15 @@
 package ro.sda.java30.finalproject.Mappers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ro.sda.java30.finalproject.entities.Customer;
 import ro.sda.java30.finalproject.model.CustomerDto;
 @Service
 public class CustomerMapper implements Mapper<Customer, CustomerDto>{
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
 
     @Override
     public Customer mapDtoToEntity(CustomerDto dto) {
@@ -14,7 +19,7 @@ public class CustomerMapper implements Mapper<Customer, CustomerDto>{
         entity.setPhoneNumber(dto.getPhoneNumber());
         entity.setAge(dto.getAge());
         entity.setEmail(dto.getEmail());
-        entity.setPassword(dto.getPassword());
+        entity.setPassword(bCryptPasswordEncoder.encode(dto.getPassword()));
         return entity;
     }
 

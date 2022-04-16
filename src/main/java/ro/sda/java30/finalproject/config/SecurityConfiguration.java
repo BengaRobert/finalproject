@@ -1,40 +1,62 @@
 package ro.sda.java30.finalproject.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import ro.sda.java30.finalproject.service.UserDetailsSecurityService;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+
+    private UserDetailsSecurityService userDetailsSecurityService;
+
+    public SecurityConfiguration(UserDetailsSecurityService userDetailsSecurityService) {
+        this.userDetailsSecurityService = userDetailsSecurityService;
+    }
+
     @Override
-    protected void configure (HttpSecurity httpSecurity) throws Exception {
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
 //                .antMatchers(HttpMethod.GET,"/api/cars").hasAnyRole("ADMIN","CARS")
 //                .antMatchers(HttpMethod.POST,"/api/cars").authenticated()
 //                .antMatchers("/api/users/**").hasAuthority("ROLE_USER_ADMIN") //test
                 .anyRequest().permitAll()
                 .and()
-                    .formLogin()
+                .formLogin()
                 .and()
-                    .httpBasic()
+                .httpBasic()
                 .and()
-                    .logout()
+                .logout()
                 .and()
-                    .csrf().ignoringAntMatchers("/api/**","/h2-console/**")
+                .csrf().ignoringAntMatchers("/api/**", "/h2-console/**")
                 .and()
-                        .headers().frameOptions().disable();
+                .headers().frameOptions().disable();
     }
 
-    protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-        authenticationManagerBuilder.inMemoryAuthentication()
-                .withUser("admin").roles("ADMIN","CARS").password("{noop}Secret_123")
-                .and()
-                .withUser("admin2").authorities("ROLE_USER_ADMIN").password("{noop}Secret_123")
-                .and()
-                .withUser("admin3").roles("CARS").password("{noop}Secret_123")
-                ;
+//    @Bean
+//    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
+
+    @Autowired
+    public void globalConfig(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsSecurityService).passwordEncoder( new BCryptPasswordEncoder());
     }
+//    protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+//        authenticationManagerBuilder.inMemoryAuthentication()
+//                .withUser("admin").roles("ADMIN","CARS").password("{noop}Secret_123")
+//                .and()
+//                .withUser("admin2").authorities("ROLE_USER_ADMIN").password("{noop}Secret_123")
+//                .and()
+//                .withUser("admin3").roles("CARS").password("{noop}Secret_123")
+//                ;
+//    }
 }

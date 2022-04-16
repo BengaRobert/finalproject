@@ -7,6 +7,7 @@ import ro.sda.java30.finalproject.model.CustomerDto;
 import ro.sda.java30.finalproject.repository.CustomerRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -41,5 +42,14 @@ public class CustomerService {
     public void deleteCustomer(Long id) {
         Customer customer = customerRepository.findById(id).orElseThrow(() -> new RuntimeException("Customer not found"));
         customerRepository.delete(customer);
+    }
+
+    public CustomerDto findByEmail(String email) {
+        Customer customer = customerRepository.findByEmail(email);
+        if (customer == null){
+           return null;
+        }
+        return customerMapper.mapEntityToDto(customer);
+
     }
 }
