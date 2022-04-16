@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Getter
 @Setter
@@ -24,6 +25,7 @@ public class Instructor {
     private String certifications;
     private String description;
     private String languages;
-    private String photo;
+    @Lob
+    private byte[] photo;
 
 }

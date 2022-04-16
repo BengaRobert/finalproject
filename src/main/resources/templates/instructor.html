@@ -10,7 +10,7 @@
 <body>
 <div class="container my-5">
     <div class="row">
-        <form method="post" th:action="@{/instructor/}" th:object="${formObject}">
+        <form method="post" th:action="@{/instructor/}" th:object="${formObject}" enctype="multipart/form-data">
             <div class="row">
                 <div class="from-group col-md-6">
                     <label for="id">ID</label>
@@ -39,6 +39,10 @@
                 <div class="from-group col-md-6">
                     <label for="description">Description</label>
                     <input id="description" type="text" th:field="*{description}">
+                </div>
+                <div class="from-group col-md-6">
+                    <input type="file" class="custom-file-input" id="customFile" name="file" accept="image/jpeg" maxlength="2MB">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
             </div>
             <div class="row">

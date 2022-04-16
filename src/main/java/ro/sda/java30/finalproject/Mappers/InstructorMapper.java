@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 import ro.sda.java30.finalproject.entities.Instructor;
 import ro.sda.java30.finalproject.model.InstructorDto;
 
+import java.util.Base64;
+
 @Service
 public class InstructorMapper implements Mapper<Instructor, InstructorDto> {
     @Override
@@ -31,7 +33,7 @@ public class InstructorMapper implements Mapper<Instructor, InstructorDto> {
         dto.setName(entity.getName());
         dto.setPhoneNumber(entity.getPhoneNumber());
         dto.setPhoto(entity.getPhoto());
-
+        dto.setPhotoBase64(Base64.getEncoder().encodeToString(entity.getPhoto()));
         return dto;
     }
 }

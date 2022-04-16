@@ -33,7 +33,7 @@
             <td th:text="${instructor.certifications}"></td>
             <td th:text="${instructor.description}"></td>
             <td th:text="${instructor.languages}"></td>
-            <td th:text="${instructor.photo}"></td>
+            <td ><img th:src="@{'data:image/jpeg;base64,'+${instructor.photoBase64}}" height="60"/></td>
 
             <td><a th:href="@{/instructor/update/{id}(id=${instructor.id})}">Update</a>
                 <a th:href="@{/instructor/delete/{id}(id=${instructor.id})}">Delete</a>

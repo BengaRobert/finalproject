@@ -32,7 +32,7 @@ public class CustomerController {
         }
         form = customerService.save(form);
         model.addAttribute("formObject", form);
-        return "redirect:/customer/";
+        return "redirect:/customer/list";
     }
     @GetMapping("/list")
     public String showAllCustomers(Model model) {

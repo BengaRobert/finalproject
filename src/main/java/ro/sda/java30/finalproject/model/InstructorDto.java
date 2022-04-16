@@ -17,5 +17,6 @@ public class InstructorDto {
     private String certifications;
     private String description;
     private String languages;
-    private String photo;
+    private byte[] photo;
+    private String photoBase64;
 }
