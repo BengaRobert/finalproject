@@ -39,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/api/users/**").hasAuthority("ROLE_USER_ADMIN") //test
                 .anyRequest().permitAll()
                 .and()
-                .formLogin()
+                .formLogin().loginPage("/login")
                 .and()
                 .httpBasic()
                 .and()
