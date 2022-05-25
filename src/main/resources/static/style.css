@@ -168,6 +168,9 @@ h3 {
   position: relative;
   overflow: hidden;
 }
+.team-col:hover{
+box-shadow: 0 0 20px 0px rgba(0, 0, 0.2);
+}
 .team-col img {
   width: 100%;
   display: block;
@@ -191,13 +194,16 @@ h3 {
   width: 100%;
   display: block;
 }
+.facilities-col:hover{
+box-shadow: 0 0 20px 0px rgba(0, 0, 0.2);
+}
 .facilities-col p {
   padding: 0;
 }
 .facilities-col h3 {
   margin-top: 16px;
   margin-bottom: 15 px;
-  text-align: left;
+  text-align:center;
 }
 /* ___CALL TO ACTION___ */
 
