@@ -62,6 +62,7 @@ body {
     background-color:  #fff;
 }
 
+
 [tabindex="-1"]:focus {
     outline: 0 !important;
 }
@@ -11542,7 +11543,7 @@ textarea.form-control {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #46b5d1;
+    background: #dd0e22;
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -23046,7 +23047,7 @@ body {
     line-height: 1.8;
     font-weight: normal;
     background: #fafafa;
-    color: #666666;
+    color: #fbfcfc;
 }
 
 a {
@@ -23173,14 +23174,14 @@ textarea.form-control {
 }
 
 .dbox p a {
-    color: #46b5d1;
+    color: #fbfcfc;
 }
 
 .dbox .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #46b5d1;
+    background: #db192c;
     margin: 0 auto;
     margin-bottom: 20px;
 }

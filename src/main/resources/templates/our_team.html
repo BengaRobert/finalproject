@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ultimate ski - Our team</title>
+    <link rel="stylesheet" href="../static/our_team.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/our_team.css">
 </head>
 <body>
+<section class="header">
+    <nav>
+        <a href="http://localhost:8080/">
+            <img class="logo" src="../static/imagini/Logo3.png" width="60" height="60"/>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="http://localhost:8080/" target="_self">HOME</a>
+
+                </li>
+                <li>
+                    <a href="http://localhost:8080/login" target="_self">LOGIN</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8080/#HomeVisit">COURSES</a>
+                </li>
+                <li>
+                    <a href="">RENT EQUIPMENT</a>
+                </li>
+                <li>
+                    <a href="">OUR TEAM</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="http://localhost:63342/finalProject/templates/contact.html?_ijt=fb75gc1mvdjkg0b4scsejag2e&_ij_reload=RELOAD_ON_SAVE" target="_self">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Our team, your new best friends</h1>
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-1">
+                            <span>Alex</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Ski<br/><br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse soluta voluptates facere ab modi illum similique sunt praesentium, alias cupiditate?</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-2">
+                            <span>Cristi</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Snowboard<br/><br/><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium eaque ea beatae iure nisi adipisci nemo tenetur totam temporibus expedita?</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-3">
+                            <span>Laurentia</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Ski<br/><br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ab aperiam harum et distinctio odio eveniet deleniti culpa aliquid eius!</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-4">
+                            <span>Nelutu</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Snowboard<br/><br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aliquam temporibus facilis error maxime necessitatibus eius repellat velit earum? Nemo.</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-5">
+                            <span>Jamaica</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Ski<br/><br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sunt, quaerat qui facere magni officiis? Tempore porro delectus officia dolor.</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="cutie">
+                        <div class="card-fata fata-6">
+                            <span>Brucelee</span>
+                        </div>
+                        <div class="card-spate">
+                            <p>Instructor Snowboard<br/><br/><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellendus hic cum quisquam veniam expedita magni maiores tempore id ullam.</p>
+                            <div class="icons">
+                                <a href="#"><i class="fab fa-facebook fb"></i></a>
+                                <a href="#"><i class="fab fa-instagram ig"></i></a>
+                                <a href="#"><i class="fab fa-twitter tw"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

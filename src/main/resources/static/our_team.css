@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(255, 136, 17, 0.3),
+        rgba(244, 208, 111, 0.0)
+      ),
+      url(../static/imagini/munte.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav img {
+    width: 100px;
+    height: 80px;
+  }
+  .nav-links {
+    flex: 1;
+    text-align: right;
+  }
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .logo {
+    padding: left 100px;
+    padding-top: 25px;
+  }
+  .nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin: -50px auto 50px;
+    font-family: sans-serif;
+}
+
+.row {
+    width: 85%;
+    margin: 75px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 30%;
+    overflow: hidden;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    perspective: 1000px;
+    cursor: pointer;
+    border: 2px solid grey;
+    border-radius: 14px;
+}
+
+.cutie {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-fata,.card-spate {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ border-radius: 12px;
+}
+
+.card-fata {
+background-position: center;
+background-size: cover;
+
+
+
+}
+span {
+    display: inline-block;
+    width: 100px;
+    padding: 14px 0;
+    margin-top: 160px ;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    transition: transform 1s;
+}
+
+.fata-1 {
+background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://ski-outdoor.ro/ski/wp-content/uploads/sites/2/2020/12/GEACA-SKI.jpg");
+}
+
+.fata-2 {
+background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://www.les3vallees.com/media/cache/hero_single/hiver-ski-alpin-addict-solo-marmotte-courchevel-1920x1080-arthurbertrand-002.jpg");
+}
+
+.fata-3 {
+background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://www.kids-ski-challenge.ro/images/header_img2022_mobi2.png");
+}
+
+.fata-4 {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://jw-webmagazine.com/wp-content/uploads/2019/11/Japan-Wireless-Ofi%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC-min.png");
+}
+.fata-5 {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://i.ytimg.com/vi/n2ScTzXC-_k/maxresdefault.jpg");
+}
+.fata-6 {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("https://d3t7modobimpp4.cloudfront.net/uploads/_1200x630_crop_center-center_82_none/hero1.jpg?mtime=20201002100948&focal=63.49%25+67.07%25&tmtime=20201023142013");
+}
+
+.card-spate {
+background: grey;
+transform: rotateX(180deg);
+
+
+}
+p {
+    display: inline-block;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    margin-top: 85px;
+}
+.card:hover .cutie {
+transform: rotateX(-180deg);
+}
+
+.card:hover span {
+transform: translateY(70px);
+}
+
+.icons i {
+font-size: 30px;
+margin: 10px 5px;
+color: white;
+}
